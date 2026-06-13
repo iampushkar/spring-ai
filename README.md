@@ -1,33 +1,36 @@
 # springai
 
-A minimal Spring Boot example that demonstrates using Spring AI's Google GenAI ChatClient.
+Minimal Spring Boot example that proxies a query to Google GenAI via Spring AI and returns the model's text response.
 
-This project exposes a single HTTP endpoint that proxies a user query to the Google GenAI chat model (via Spring AI) and returns the model's text response.
-
-Prerequisites
+## Prerequisites
 - Java 21
-- Maven 
-- A Google GenAI API key (or other provider configuration supported by Spring AI) with access to the GenAI model you want to use.
+- Maven
+- Google GenAI API key
 
-Configuration
-The project reads the API key from the Spring property `spring.ai.google.genai.api-key`. 
+## Configuration
+Set the API key in `application.properties` or as an environment property:
+
 ```
-spring.ai.google.genai.api-key=ENTER_YOUR_API
+spring.ai.google.genai.api-key=YOUR_API_KEY
 ```
 
-Default server port: 8080 (standard Spring Boot default).
+## Run
+```
+mvn spring-boot:run
+```
 
-Usage
+## UI
+Open http://localhost:8080/ in a browser and use the simple web UI (type a query and click "Send").
 
-The application exposes a simple GET endpoint:
+## Endpoint
+```
+GET /api/ai/{query}
+```
 
-- GET /api/ai/{query}
-
-Example (URI-encode spaces):
-
+## Example
 ```
 curl -s "http://localhost:8080/api/ai/Hello%20from%20SpringAI"
 ```
 
-Response:
-- Returns the model's text output as a plain string in the HTTP response body.
+## Response
+Plain text: the model's output.
