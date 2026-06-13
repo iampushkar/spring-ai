@@ -1,6 +1,9 @@
 # springai
 
 Minimal Spring Boot example that proxies a query to Google GenAI via Spring AI and returns the model's text response.
+
+<img width="1306" height="681" alt="image" src="https://github.com/user-attachments/assets/aaa6911b-f7f5-46eb-9e9b-086320697a50" />
+
 <img width="1346" height="692" alt="image" src="https://github.com/user-attachments/assets/dea85740-d917-48d6-92c2-d5cf1b36a145" />
 
 ## Prerequisites
